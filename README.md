@@ -1,4 +1,4 @@
-# Chronic Kidney Disease Prediction Pipeline
+# Predicting Chronic Kidney Disease with Machine Learning
 
 ## Overview
 
