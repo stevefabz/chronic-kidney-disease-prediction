@@ -1,0 +1,105 @@
+2024-11-30 17:21:06,350 - INFO - Pipeline initialized with data_path='c:\Users\steve\Documents\Github\chronic-kidney-disease-prediction\kidney_disease.csv' and output_dir='c:\Users\steve\Documents\Github\chronic-kidney-disease-prediction\output'
+2024-11-30 17:21:06,350 - INFO - Loading dataset...
+2024-11-30 17:21:06,350 - INFO - Dataset loaded successfully with 400 rows and 26 columns.
+2024-11-30 17:21:06,350 - INFO - Starting data preprocessing...
+2024-11-30 17:21:06,350 - INFO - Filled missing values in column 'id' with the mean: 199.5
+2024-11-30 17:21:06,350 - INFO - Filled missing values in column 'age' with the mean: 51.483375959079275
+2024-11-30 17:21:06,350 - INFO - Filled missing values in column 'bp' with the mean: 76.46907216494844
+2024-11-30 17:21:06,365 - INFO - Filled missing values in column 'sg' with the mean: 1.0174079320113314
+2024-11-30 17:21:06,365 - INFO - Filled missing values in column 'al' with the mean: 1.0169491525423728
+2024-11-30 17:21:06,365 - INFO - Filled missing values in column 'su' with the mean: 0.4501424501424502
+2024-11-30 17:21:06,367 - INFO - Filled missing values in column 'rbc' with the mode: normal
+2024-11-30 17:21:06,368 - INFO - Filled missing values in column 'pc' with the mode: normal
+2024-11-30 17:21:06,369 - INFO - Filled missing values in column 'pcc' with the mode: notpresent
+2024-11-30 17:21:06,370 - INFO - Filled missing values in column 'ba' with the mode: notpresent
+2024-11-30 17:21:06,371 - INFO - Filled missing values in column 'bgr' with the mean: 148.0365168539326
+2024-11-30 17:21:06,371 - INFO - Filled missing values in column 'bu' with the mean: 57.4257217847769
+2024-11-30 17:21:06,371 - INFO - Filled missing values in column 'sc' with the mean: 3.072454308093995
+2024-11-30 17:21:06,372 - INFO - Filled missing values in column 'sod' with the mean: 137.52875399361022
+2024-11-30 17:21:06,372 - INFO - Filled missing values in column 'pot' with the mean: 4.62724358974359
+2024-11-30 17:21:06,373 - INFO - Filled missing values in column 'hemo' with the mean: 12.526436781609195
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'pcv' with the mode: 41
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'wc' with the mode: 9800
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'rc' with the mode: 5.2
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'htn' with the mode: no
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'dm' with the mode: no
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'cad' with the mode: no
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'appet' with the mode: good
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'pe' with the mode: no
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'ane' with the mode: no
+2024-11-30 17:21:06,374 - INFO - Filled missing values in column 'classification' with the mode: ckd
+2024-11-30 17:21:06,374 - INFO - Encoded column 'rbc' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'pc' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'pcc' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'ba' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'pcv' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'wc' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'rc' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'htn' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'dm' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'cad' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'appet' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'pe' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,374 - INFO - Encoded column 'ane' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,388 - INFO - Encoded column 'classification' with LabelEncoder to convert categories into numbers.
+2024-11-30 17:21:06,388 - INFO - Data preprocessing complete.
+2024-11-30 17:21:06,388 - INFO - Selecting top features using mutual information...
+2024-11-30 17:21:07,041 - INFO - Top features selected: ['id', 'sg', 'al', 'sc', 'sod', 'hemo', 'pcv', 'rc', 'htn', 'dm']
+2024-11-30 17:21:07,041 - INFO - Balancing classes using SMOTE...
+2024-11-30 17:21:07,041 - INFO - Classes balanced. Dataset now has 744 samples.
+2024-11-30 17:21:07,053 - INFO - Scaling features...
+2024-11-30 17:21:07,053 - INFO - Feature scaling complete. All features have been standardized.
+2024-11-30 17:21:07,053 - INFO - Training models with GridSearchCV...
+2024-11-30 17:21:07,053 - INFO - Starting GridSearch for Random Forest...
+2024-11-30 17:21:14,425 - INFO - Best parameters for Random Forest: {'max_depth': 6, 'n_estimators': 150}
+2024-11-30 17:21:14,425 - INFO - Best estimator for Random Forest: RandomForestClassifier(max_depth=6, n_estimators=150, random_state=42)
+2024-11-30 17:21:14,425 - INFO - Starting GridSearch for Gradient Boosting...
+2024-11-30 17:21:20,570 - INFO - Best parameters for Gradient Boosting: {'learning_rate': 0.05, 'n_estimators': 100}
+2024-11-30 17:21:20,570 - INFO - Best estimator for Gradient Boosting: GradientBoostingClassifier(learning_rate=0.05, random_state=42)
+2024-11-30 17:21:20,570 - INFO - Starting GridSearch for Neural Network...
+2024-11-30 17:21:23,676 - INFO - Best parameters for Neural Network: {'alpha': 0.0001, 'hidden_layer_sizes': (50, 30)}
+2024-11-30 17:21:23,676 - INFO - Best estimator for Neural Network: MLPClassifier(hidden_layer_sizes=(50, 30), max_iter=300, random_state=42)
+2024-11-30 17:21:23,676 - INFO - Model training complete.
+2024-11-30 17:21:23,676 - INFO - Evaluating models...
+2024-11-30 17:21:23,676 - INFO - Saving results to c:\Users\steve\Documents\Github\chronic-kidney-disease-prediction\output\model_results.pdf and c:\Users\steve\Documents\Github\chronic-kidney-disease-prediction\output\model_results.txt
+2024-11-30 17:21:23,679 - INFO - Evaluating Random Forest...
+2024-11-30 17:21:23,699 - INFO - Random Forest classification report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99        49
+           1       1.00      0.98      0.99        50
+           2       1.00      1.00      1.00        50
+
+    accuracy                           0.99       149
+   macro avg       0.99      0.99      0.99       149
+weighted avg       0.99      0.99      0.99       149
+
+2024-11-30 17:21:23,699 - INFO - Random Forest AUC-ROC: 1.00
+2024-11-30 17:21:24,402 - INFO - Evaluating Gradient Boosting...
+2024-11-30 17:21:24,402 - INFO - Gradient Boosting classification report:
+              precision    recall  f1-score   support
+
+           0       0.96      1.00      0.98        49
+           1       1.00      0.98      0.99        50
+           2       1.00      0.98      0.99        50
+
+    accuracy                           0.99       149
+   macro avg       0.99      0.99      0.99       149
+weighted avg       0.99      0.99      0.99       149
+
+2024-11-30 17:21:24,402 - INFO - Gradient Boosting AUC-ROC: 1.00
+2024-11-30 17:21:24,846 - INFO - Evaluating Neural Network...
+2024-11-30 17:21:24,846 - INFO - Neural Network classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.98      0.99        49
+           1       0.98      1.00      0.99        50
+           2       1.00      1.00      1.00        50
+
+    accuracy                           0.99       149
+   macro avg       0.99      0.99      0.99       149
+weighted avg       0.99      0.99      0.99       149
+
+2024-11-30 17:21:24,864 - INFO - Neural Network AUC-ROC: 1.00
+2024-11-30 17:21:25,099 - INFO - PDF saved successfully at c:\Users\steve\Documents\Github\chronic-kidney-disease-prediction\output\model_results.pdf
+2024-11-30 17:21:25,099 - INFO - Text file saved successfully at c:\Users\steve\Documents\Github\chronic-kidney-disease-prediction\output\model_results.txt
